@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+"""A function to start a coroutine for a random time"""
 
 import random
 import asyncio
