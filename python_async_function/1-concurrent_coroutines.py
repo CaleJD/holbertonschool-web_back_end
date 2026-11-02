@@ -8,8 +8,8 @@ wait_random = __import__('0-basic_async_syntax').wait_random
 
 async def wait_n(n: int, max_delay: int = 10) -> list:
     """Spawns "n" amount of wait_random"""
-    spawns = []
+    delays = []
     for corout in asyncio.as_completed(
             [wait_random(max_delay) for i in range(n)]):
-        spawns.append(await corout)
-    return spawns
+        delays.append(await corout)
+    return delays
