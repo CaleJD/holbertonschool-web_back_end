@@ -4,6 +4,7 @@
 import random
 import asyncio
 
+
 async def async_generator():
     """Loops 10 times yielding a new number each time"""
     for i in range(10):
