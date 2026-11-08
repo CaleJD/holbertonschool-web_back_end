@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
+"""Gets 10 random numbers using comprehension"""
 
+from typing import List
 import asyncio
+
 
 async_generator = __import__('0-async_generator').async_generator
 
-async def print_yielded_values():
-    result = []
-    async for i in async_generator():
-        result.append(i)
-    return result
+
+async def async_comprehension() -> List[float]:
+    """Returns a list of 10 random numbers"""
+    return [i async for i in async_generator()]
